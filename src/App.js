@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Customer from './components/Customer'
 import './App.css';
 
+
+
 const customer = [
   {
     'id': 1,
@@ -33,20 +35,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {
-          customer.map(c => {
-            return (
-              <Customer 
-                id={c.id}
-                image={c.image}
-                name={c.name}
-                birthday={c.birthday}
-                gender={c.gender}
-                job={c.job}
-              />
-            );
-          })
-        }
+        { customer.map(c => { return ( <Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job} /> ); }) }
       </div>
     );
   }
